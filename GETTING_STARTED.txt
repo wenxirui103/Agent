@@ -1,0 +1,84 @@
+# AI 智能体开发学习项目
+
+## 📋 项目说明
+
+这是一个基于 Python 的 AI 智能体开发学习环境，用于测试和优化本地 LLM 配置。
+
+## 🚀 快速开始
+
+### 1. 配置环境变量
+
+```powershell
+# 复制模板文件
+cp env.example .env
+
+# 编辑 .env 文件，填入你的 LLM 配置
+```
+
+### 2. 配置示例
+
+**.env 文件配置示例（以 Ollama 为例）：**
+
+```env
+LLM_BASE_URL=http://localhost:11434/v1
+LLM_MODEL=llama2
+LLM_API_TOKEN=
+REQUEST_TIMEOUT=30
+MAX_TOKENS=2048
+TEMPERATURE=0.7
+TOP_P=0.9
+```
+
+### 3. 运行测试
+
+```powershell
+python practice01/test_llm_connection.py
+```
+
+## 📁 项目结构
+
+```
+人工智能提示/
+├── .gitignore              # Git 排除文件
+├── env.example             # 环境变量模板
+├── main.py                 # 主程序入口
+├── practice01/             # 练习模块 01
+│   ├── __init__.py
+│   └── test_llm_connection.py  # LLM 连接测试工具
+└── .venv/                  # Python 虚拟环境
+```
+
+## 🔧 常用 LLM 服务配置
+
+### Ollama（推荐本地部署）
+```env
+LLM_BASE_URL=http://localhost:11434/v1
+LLM_MODEL=llama2
+```
+
+### LM Studio
+```env
+LLM_BASE_URL=http://localhost:1234/v1
+LLM_MODEL=local-model
+```
+
+### OpenAI
+```env
+LLM_BASE_URL=https://api.openai.com/v1
+LLM_MODEL=gpt-3.5-turbo
+LLM_API_TOKEN=sk-your-api-key
+```
+
+## 💡 下一步
+
+1. 下载并安装 LLM 服务（如 Ollama）
+2. 下载适合的模型
+3. 配置 .env 文件
+4. 运行测试脚本验证连接
+5. 调整参数找到最佳配置
+
+## 📝 注意事项
+
+- `.env` 文件已加入 `.gitignore`，不会提交到版本控制
+- 请妥善保管 API Token，不要泄露
+- 不同模型需要不同的显存和内存配置
