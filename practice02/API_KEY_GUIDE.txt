@@ -1,0 +1,61 @@
+========================================
+DeepSeek API 密钥获取指南
+========================================
+
+📋 步骤说明：
+
+1️⃣ 访问 DeepSeek 开放平台
+   👉 https://platform.deepseek.com/
+
+2️⃣ 注册/登录账号
+   - 使用邮箱或手机号注册
+   - 完成实名认证（如需）
+
+3️⃣ 创建 API 密钥
+   - 登录后进入控制台
+   - 找到 "API Keys" 或 "密钥管理"
+   - 点击 "创建新密钥"
+   - 复制生成的密钥（格式：sk-xxxxx）
+
+4️⃣ 配置到项目
+   - 打开项目根目录的 .env 文件
+   - 找到 LLM_API_TOKEN 这一行
+   - 将 sk-your-deepseek-api-key-here 替换为你的真实密钥
+   
+   例如：
+   LLM_API_TOKEN=sk-abc123def456ghi789...
+
+5️⃣ 测试连接
+   运行以下命令测试：
+   python practice02/chat_demo.py --demo
+
+
+💰 费用说明：
+- DeepSeek 提供免费额度
+- deepseek-chat: 约 ¥2/百万 tokens
+- 详细价格查看官网定价页面
+
+
+🔒 安全提示：
+- ⚠️ 永远不要将 .env 文件上传到 GitHub
+- ⚠️ 不要公开分享你的 API 密钥
+- ✅ 项目已配置 .gitignore 保护 .env 文件
+
+
+❓ 常见问题：
+
+Q: 提示 "Authentication Fails"？
+A: 检查 API 密钥是否正确复制，确保没有多余空格
+
+Q: 提示 "Insufficient balance"？
+A: 账户余额不足，需要充值或使用免费额度
+
+Q: 如何查看使用情况？
+A: 在 DeepSeek 控制台的 "使用统计" 中查看
+
+
+📞 需要帮助？
+- DeepSeek 官方文档: https://platform.deepseek.com/docs
+- 技术支持: 通过官网联系
+
+========================================
